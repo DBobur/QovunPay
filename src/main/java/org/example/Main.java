@@ -1,16 +1,12 @@
 package org.example;
 
-import org.example.model.model.User;
+import org.example.model.User;
 import org.example.service.UserService;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static org.example.controller.AuthController.*;
 import static org.example.controller.UserController.*;
-import static org.example.controller.BlockController.*;
-import static org.example.controller.CardController.*;
-import static org.example.controller.MessageController.*;
-import static org.example.controller.OrganizationController.*;
 import static org.example.controller.TransactionController.*;
 
 public class Main {

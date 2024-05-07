@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.model.model.User;
+import org.example.model.User;
 
 import java.util.Objects;
 import java.util.Optional;

@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.model.model.Organization;
+import org.example.model.Organization;
 
 public class OrganizationRepository extends BaseRepository<Organization> {
     {

@@ -1,7 +1,7 @@
 package org.example.service;
 
 import org.example.excetion.ModelAlreadyExistExcaption;
-import org.example.model.model.BaseModel;
+import org.example.model.BaseModel;
 import org.example.repository.BaseRepository;
 
 import java.util.ArrayList;

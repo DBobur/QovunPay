@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.model.model.Message;
+import org.example.model.Message;
 
 public class MessageRepository extends BaseRepository<Message> {
     {

@@ -1,4 +1,4 @@
-package org.example.model.model;
+package org.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -13,8 +13,9 @@ import java.util.UUID;
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Block extends BaseModel{
-    private UUID blocking;
-    private CardStatus status;
-    private String reason;
+public class Message extends BaseModel{
+    private UUID sender;
+    private UUID recipient;
+    private String message;
 }
+

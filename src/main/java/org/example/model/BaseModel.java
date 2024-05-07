@@ -1,4 +1,4 @@
-package org.example.model.model;
+package org.example.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;

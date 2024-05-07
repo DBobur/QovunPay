@@ -2,7 +2,7 @@ package org.example.service;
 
 import org.example.excetion.ModelNotFoundExcaption;
 import org.example.excetion.PasswordWrongExcaption;
-import org.example.model.model.User;
+import org.example.model.User;
 import org.example.repository.UserRepository;
 
 import java.util.Objects;

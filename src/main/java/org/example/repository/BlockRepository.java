@@ -1,6 +1,6 @@
 package org.example.repository;
 
-import org.example.model.model.Block;
+import org.example.model.Block;
 
 public class BlockRepository extends BaseRepository<Block> {
     {

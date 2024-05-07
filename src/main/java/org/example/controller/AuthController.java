@@ -1,6 +1,6 @@
 package org.example.controller;
 import org.example.Message;
-import org.example.model.model.User;
+import org.example.model.User;
 
 import static org.example.Main.*;
 
