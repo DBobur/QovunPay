@@ -9,6 +9,7 @@ import org.example.model.model.BaseModel;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public abstract class BaseRepository<T extends BaseModel> {
@@ -22,6 +23,13 @@ public abstract class BaseRepository<T extends BaseModel> {
         ts.add(t);
         try {
             objectMapper.writeValue(new File(path),ts);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void writeAll(ArrayList<T> t){
+        try {
+            objectMapper.writeValue(new File(path),t);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
