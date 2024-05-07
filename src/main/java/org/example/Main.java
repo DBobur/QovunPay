@@ -1,8 +1,11 @@
 package org.example;
 
+import org.example.model.BaseModel;
 import org.example.model.User;
+import org.example.service.CardService;
 import org.example.service.UserService;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static org.example.controller.AuthController.*;
@@ -13,6 +16,7 @@ public class Main {
     public static Scanner scNum = new Scanner(System.in);
     public static Scanner scStr = new Scanner(System.in);
     public static UserService userService = UserService.getInstance();
+    public static CardService cardService = CardService.getInstance();
     public static User currentUser;
     public static void main(String[] args) {
         welcomeMenu();
@@ -25,7 +29,7 @@ public class Main {
                     2.Login
                     0.Exit
                     """);
-            int command = inputInt("command: ");
+            int command = (Integer) inputNumber("command: ").intValue();
             switch (command) {
                 case -1 -> System.out.println("Error entered?");
                 case 1 -> register();
@@ -45,7 +49,7 @@ public class Main {
                     3.Accounts
                     0.Logout
                     """);
-            int command = inputInt("command: ");
+            int command = (Integer) inputNumber("command: ").intValue();
             switch (command){
                 case -1 -> System.out.println("Error entered?");
                 case 1 -> transaction();
@@ -57,18 +61,22 @@ public class Main {
         }
     }
 
-    public static String inputStr(String message){
+    public static String inputString(String message){
         System.out.print(message);
         return scStr.nextLine();
     }
-    public static int inputInt(String message){
+    public static Number inputNumber(String message){
         System.out.print(message);
         try {
-            return scNum.nextInt();
+            return scNum.nextDouble();
         }catch (InputMismatchException e){
             System.out.println(e.getMessage());
             scNum = new Scanner(System.in);
             return -1;
         }
+    }
+
+    public static <T extends BaseModel> void readyList(ArrayList<T> list){
+        list.stream().forEach(System.out::println);
     }
 }

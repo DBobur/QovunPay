@@ -4,17 +4,20 @@ import org.example.excetion.ModelNotFoundExcaption;
 import org.example.excetion.PasswordWrongExcaption;
 import org.example.excetion.UsernameAlreadyExistExcaption;
 import org.example.model.User;
+import org.example.model.UserRole;
 
+
+import java.util.List;
 
 import static org.example.Main.*;
 
 public class AuthController {
     public static void register(){
-        String name = inputStr("Enter name :");
-        String userName = inputStr("Enter UserName :");
-        String password = inputStr("Enter password :");
+        String name = inputString("Enter name :");
+        String userName = inputString("Enter UserName: ");
+        String password = inputString("Enter password: ");
         try {
-            userService.add(new User(name,userName,password));
+            userService.add(new User(name,userName,password, List.of(UserRole.USER)));
             System.out.println(Message.SUCCESSFULLY);
         }catch (UsernameAlreadyExistExcaption e){
             System.out.println(e.getMessage());
@@ -23,8 +26,8 @@ public class AuthController {
 
     }
     public static void login(){
-        String userName = inputStr("Enter UserName :");
-        String password = inputStr("Enter password :");
+        String userName = inputString("Enter UserName: ");
+        String password = inputString("Enter password: ");
         try {
             currentUser = userService.login(userName,password);
         }catch (ModelNotFoundExcaption | PasswordWrongExcaption e){

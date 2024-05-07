@@ -1,7 +1,8 @@
 [ {
-  "id" : "d470c466-5589-4688-970d-2d10eced3964",
-  "createdDate" : "2024:05:06 19:38:12",
+  "id" : "a598a97a-40b9-4af5-9fb1-28a8586c5f6a",
+  "createdDate" : "2024:05:06 23:55:52",
   "name" : "b",
   "username" : "b",
-  "password" : "b"
-}]
+  "password" : "b",
+  "roles" : [ "USER" ]
+} ]

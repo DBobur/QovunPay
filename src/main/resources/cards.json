@@ -1,1 +1,9 @@
-[]
+[ {
+  "id" : "b5d2e55e-d675-41c1-a92d-89f0157508dc",
+  "createdDate" : "2024:05:07 00:14:20",
+  "owner" : "a598a97a-40b9-4af5-9fb1-28a8586c5f6a",
+  "type" : "UZCARD",
+  "name" : "b",
+  "cardNumber" : "b",
+  "balance" : 10000.0
+} ]

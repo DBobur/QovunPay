@@ -9,7 +9,7 @@ public class UserController {
                     2.Update Profile
                     0.Back
                     """);
-            int command = inputInt("command: ");
+            int command = (Integer) inputNumber("command: ").intValue();
             switch (command){
                 case -1 -> System.out.println("Error entered?");
                 case 1 -> CardController.cardCRUD();

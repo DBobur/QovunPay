@@ -7,7 +7,6 @@ import lombok.*;
 import java.util.UUID;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
 @ToString
@@ -16,6 +15,15 @@ import java.util.UUID;
 public class Card extends BaseModel{
     private UUID owner;
     private CardType type;
+    private String name;
     private String cardNumber;
     private double balance;
+
+    public Card(UUID owner, CardType type, String name, String cardNumber, double balance) {
+        this.owner = owner;
+        this.type = type;
+        this.name = name;
+        this.cardNumber = cardNumber;
+        this.balance = balance;
+    }
 }
