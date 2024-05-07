@@ -1,6 +1,6 @@
 package org.example.service;
 
-import org.example.excetion.ModelAlreadyExistExcaption;
+import org.example.excetion.UsernameAlreadyExistExcaption;
 import org.example.model.BaseModel;
 import org.example.repository.BaseRepository;
 
@@ -14,7 +14,7 @@ public abstract class BaseService<T extends BaseModel, R extends BaseRepository<
     }
 
     public void add(T t){
-        if(checking(t)) throw new ModelAlreadyExistExcaption("Model already exists?");
+        if(checking(t)) throw new UsernameAlreadyExistExcaption("Username already exist");
         repository.write(t);
     }
     public ArrayList<T> getAll(){

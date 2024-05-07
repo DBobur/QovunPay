@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.math.BigInteger;
 import java.util.UUID;
 
 @NoArgsConstructor
@@ -19,5 +20,6 @@ public class Organization extends BaseModel{
     private UUID owner;
     private String name;
     private String accountNumber;
+    private BigInteger balance;
 
 }

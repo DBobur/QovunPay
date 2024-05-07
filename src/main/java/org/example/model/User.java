@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
+import javax.management.relation.Role;
+import java.util.List;
+
 @NoArgsConstructor
 @Setter
 @Getter
@@ -14,6 +17,7 @@ public class User extends BaseModel {
     private String name;
     private String username;
     private String password;
+    private List<Role> roles;
 
     public User(String name, String username, String password) {
         this.name = name;

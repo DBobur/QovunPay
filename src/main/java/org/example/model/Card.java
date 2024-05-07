@@ -15,6 +15,7 @@ import java.util.UUID;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Card extends BaseModel{
     private UUID owner;
+    private CardType type;
     private String cardNumber;
     private double balance;
 }

@@ -42,7 +42,7 @@ public class Main {
             System.out.print("""
                     1.Transaction
                     2.Pay
-                    2.Accounts
+                    3.Accounts
                     0.Logout
                     """);
             int command = inputInt("command: ");
