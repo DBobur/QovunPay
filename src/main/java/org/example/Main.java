@@ -6,6 +6,12 @@ import org.example.service.UserService;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import static org.example.controller.AuthController.*;
+import static org.example.controller.UserController.*;
+import static org.example.controller.BlockController.*;
+import static org.example.controller.CardController.*;
+import static org.example.controller.MessageController.*;
+import static org.example.controller.OrganizationController.*;
+import static org.example.controller.TransactionController.*;
 
 public class Main {
     public static Scanner scNum = new Scanner(System.in);
@@ -35,7 +41,25 @@ public class Main {
             }
         }
     }
-    public static void userMenu(){}
+    public static void userMenu(){
+        while (true){
+            System.out.print("""
+                    1.Transaction
+                    2.Pay
+                    2.Accounts
+                    0.Logout
+                    """);
+            int command = inputInt("command: ");
+            switch (command){
+                case -1 -> System.out.println("Error entered?");
+                case 1 -> transaction();
+                case 2 -> pay();
+                case 3 -> accounts();
+                case 0 -> {return;}
+                default -> System.out.println("Non command");
+            }
+        }
+    }
 
     public static String inputStr(String message){
         System.out.print(message);

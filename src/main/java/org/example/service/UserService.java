@@ -21,7 +21,7 @@ public class UserService extends BaseService<User, UserRepository>{
     @Override
     protected boolean checking(User user) {
         Optional<User> byUsername = repository.getByUsername(user.getUsername());
-        return byUsername.isEmpty();
+        return byUsername.isPresent();
     }
 
     public User login(String userName, String password) {
