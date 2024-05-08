@@ -78,5 +78,6 @@ public class Main {
 
     public static <T extends BaseModel> void readyList(ArrayList<T> list){
         list.stream().forEach(System.out::println);
+
     }
 }
