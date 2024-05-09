@@ -44,6 +44,7 @@ public class CardController {
         String name = inputString("Enter card number: ");
         String number = inputString("Enter number: ");
         Double balance = (Double) inputNumber("Enter balance: ");
+
         cardService.add(new Card(currentUser.getId(),type,name,number,balance));
     }
 
